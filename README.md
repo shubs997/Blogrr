@@ -28,4 +28,6 @@ Libraries: JDBC Connector and JSTL
 
 ```Go to web pages -> right click & run index.jsp```
 
+`` execute the MySQL file blog_db.sql``
+
 register and start blogging!
