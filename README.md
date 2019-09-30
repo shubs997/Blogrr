@@ -19,3 +19,10 @@ Libraries: JDBC Connector and JSTL
 * BOOTSTRAP
 * JAVA EE
 * MYSQL
+
+#To Execute this project
+```Clone this repository```
+
+open netbeans -> open project 
+
+Go to web -> right click & run index.jsp
