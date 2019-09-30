@@ -1,6 +1,6 @@
 # social-media-blog-website
 website created for causecode challenge 
-
+![](blog-website.gif)
 Java EE project made using JSP and Servlets with Model View Controller (MVC) architecture.
 
 Java : 1.8.0.
