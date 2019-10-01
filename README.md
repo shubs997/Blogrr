@@ -5,7 +5,7 @@ Java EE project made using JSP and Servlets with Model View Controller (MVC) arc
 
 Java : 1.8.0.
 
-IDE : Apache Netbeans 8.2 or higher.
+IDE : Apache Netbeans EE(Enterprise Edition) 8.2 or higher.
 
 Server: Apache Tomcat 8.0.27.0.
 
