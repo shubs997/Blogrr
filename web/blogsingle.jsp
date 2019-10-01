@@ -11,33 +11,43 @@
 				<div class="row">
 					<div class="col-lg-9 col-12">
 						<div class="row">
-                                                    <c:forEach var="s" items="${bloglist}">
-                                                                <div class="col-lg-4 col-12">
-                                                                        <!-- Single Blog -->
-                                                                        <div class="single-blog">
-                                                                                <div class="blog-head overlay">
-                                                                                        <div class="date">
-                                                                                                <h4>05<span>May</span></h4>
-                                                                                        </div>
-                                                                                        <img src="images/blog/${s.files}" alt="#">
-                                                                                </div>
-                                                                                <div class="blog-content">
-                                                                                        <h4 class="blog-title"><a href="blog-single.html">${s.title}</a></h4>
-                                                                                        <div class="blog-info">
-                                                                                                <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                                                                <a href="#"><i class="fa fa-list"></i>Learning</a>
-                                                                                                <a href="#"><i class="fa fa-heart-o"></i>53K</a>
-                                                                                        </div>
-                                                                                        <p>${s.desc}</p>
-                                                                                        <div class="button">
-                                                                                                <!-- pass unique blog-title in url to display blog-body of that blog-->
-                                                                                                <a href="readMoreServlet?blogTitle=${s.title}" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                                                        </div>
-                                                                                </div>
+                                                        <div class="col-lg-8 col-12">
+                                                            <div class="blog-detail" style="margin-left: 100px;">
+                                                                <c:forEach var="v" items="${viewb}">
+                                                                        <div class="detail-content">
+                                                                                <h2 class="blog-title"><a href="#">${v.title}</a></h2>
+                                                                                <div class="blog-info">
+                                                                                        <a href="#"><i class="fa fa-user"></i>${v.author}</a>
+                                                                                        <a href="#"><i class="fa fa-calendar"></i>${v.date}</a>
+                                                                                        <a href="#"><i class="fa fa-bolt"></i>Learning</a>
+                                                                                </div><br>
+                                                                                <p>${v.body}</p>
                                                                         </div>
-                                                                        <!-- End Single Blog -->
+                                                                </c:forEach><br><br><br><br>
+                                                                        <div class="comment-main">
+                                                                                <div id="disqus_thread"></div>
+                                                                                <script>
+
+                                                                                /**
+                                                                                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                                                                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                                                                /*
+                                                                                var disqus_config = function () {
+                                                                                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                                                                                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                                                                };
+                                                                                */
+                                                                                (function() { // DON'T EDIT BELOW THIS LINE
+                                                                                var d = document, s = d.createElement('script');
+                                                                                s.src = 'https://https-shubhamjblog-netlify-com.disqus.com/embed.js';
+                                                                                s.setAttribute('data-timestamp', +new Date());
+                                                                                (d.head || d.body).appendChild(s);
+                                                                                })();
+                                                                                </script>
+                                                                                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                                                        </div>
                                                                 </div>
-                                                        </c:forEach> 
+                                                        </div>
 <!--							<div class="col-lg-4 col-12">
 								 Single Blog 
 								<div class="single-blog">
@@ -159,21 +169,7 @@
 								 End Single Blog 
 							</div>-->
 						</div>
-						<div class="row">
-							<div class="col-12">
-								<!-- Start Pagination -->
-								<div class="pagination-main">
-									<ul class="pagination">
-										<li class="prev"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-										<li class="active"><a href="#">1</a></li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-									</ul>
-								</div>
-								<!--/ End Pagination -->
-							</div>
-						</div>
+
 					</div>
 					<div class="col-lg-3 col-12">
 						<div class="learnedu-sidebar">

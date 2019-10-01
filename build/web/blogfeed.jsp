@@ -30,7 +30,8 @@
                                                                                         </div>
                                                                                         <p>${s.desc}</p>
                                                                                         <div class="button">
-                                                                                                <a href="#" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
+                                                                                                <!-- pass unique blog-title in url to display blog-body of that blog-->
+                                                                                                <a href="readMoreServlet?blogTitle=${s.title}" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
                                                                                         </div>
                                                                                 </div>
                                                                         </div>

@@ -222,4 +222,51 @@ public class DaoMVC
 		return nlist;
                 
     }
+    
+    public static List readMoreBlogBody(String blogTitle) 
+    {
+        ResultSet rs=null;
+         String sql="select title,body,author,date from blog_posts where title like ?";
+	 Connection con=connect();
+         ArrayList<blogBeans> elist = new ArrayList<>();
+
+		try
+		{
+                    PreparedStatement stm=con.prepareStatement(sql);
+                    //stm.setString(1, ub.getName());
+                    stm.setString(1,blogTitle);
+                    //System.out.println("value of 1st ? is:"+"%"+ub.getName()+"%");
+                    System.out.println("value of blogTitle(?) is:"+"%"+blogTitle+"%");
+                    
+                    //System.out.println("sltuser: " +ub.getName());
+                    
+                    rs=stm.executeQuery();
+                          
+                    while(rs.next()){
+                        System.out.println("in while loop");
+                        String title = rs.getString(1);
+                        String body = rs.getString(2);
+                        String author = rs.getString(3);
+                        String date = rs.getString(4);
+                        System.out.println("Table Contents in dispblog class:"+body+" "+author+" ");
+                        
+                        //set the values in noticeBeans model
+                        blogBeans cb=new blogBeans();
+                        cb.setTitle(title);
+                        cb.setBody(body);
+                        cb.setAuthor(author);
+                        cb.setDate(date);
+                        System.out.println("Table Contents in dispblog class to model:"+cb.getTitle()+" " +cb.getBody()+" "+cb.getAuthor()+" "+cb.getDate());
+                        
+                        elist.add(cb);
+                     }
+
+		}
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return elist;
+    }
 }

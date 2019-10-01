@@ -386,9 +386,10 @@ Version:	1.0
 .blog .blog-content .blog-title {
 	font-size: 18px;
 	margin-bottom: 5px;
+        text-decoration: none;
 }
 .blog .blog-content .blog-title a{
-	color:#252525;
+	color:#252525;  
 }
 .blog .blog-content .btn {
 	color: #fff;
@@ -564,6 +565,9 @@ width: 100%;
 }
 .blog.b-archives.single .blog-title a{
 	color:#252525;
+}
+.blog-detail{
+    margin-left: 100px;
 }
 .blog.b-archives.single .detail-content p{
 	margin-bottom:20px;

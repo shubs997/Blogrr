@@ -28,9 +28,9 @@
           <label>Blog Description</label>
           <input type="text" name="desc" maxlength="70" class="form-control" placeholder="Add Blog Description...">
         </div>
-        <div class="form-group">
-          <label>Blog Body</label>
-          <textarea  name="body" maxlength="1000" class="form-control" placeholder="Blog Body"></textarea>
+        <div class="form-group" name="editor1">
+          <label>Enter Body of the Blog..</label>
+          <textarea id="mytextarea"  name="body" maxlength="1000" class="form-control" placeholder="Blog Body"></textarea>
         </div>
         <div class="checkbox">
           <label>
