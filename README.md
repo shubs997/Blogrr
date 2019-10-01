@@ -21,7 +21,7 @@ Libraries: JDBC Connector and JSTL
 * JAVA EE
 * MYSQL
 
-##To Execute this project
+## To Execute this project
 ```Clone this repository```
 
 ```open netbeans -> open project``` 
