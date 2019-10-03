@@ -26,6 +26,7 @@
 							  </div>
 							  <div class="form-group">
 							    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                            <p>${loginmsg}</p>
 							  </div>
 							  <button type="submit" class="btn btn-default btn-lg">Submit</button>
 							  </div>

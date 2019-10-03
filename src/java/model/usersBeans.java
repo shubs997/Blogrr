@@ -19,6 +19,7 @@ public class usersBeans
         {
             this.uid=0;
             this.uname="";
+            this.pass="";
             this.emailid="";
         }
         

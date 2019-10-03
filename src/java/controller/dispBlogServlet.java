@@ -51,7 +51,6 @@ public class dispBlogServlet extends HttpServlet {
         List blogs;
         blogs = DaoMVC.displayBlogs();
         System.out.println("set list ");
-        session.setAttribute("username","shubham");
         //session.setAttribute("nname",uname);
         session.setAttribute("bloglist",blogs); 
         System.out.println("set session to list ");

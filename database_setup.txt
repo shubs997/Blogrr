@@ -1,0 +1,28 @@
+
+#JUST EXECUTE THESE 4 QUERRIES IF blog_db.sql cannot be executed
+
+
+create database blog_db;
+
+
+use blog_db;
+
+
+CREATE TABLE `userdb` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+);
+
+
+CREATE TABLE `blog_posts` (
+  `title` varchar(2000) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `body` varchar(20000) DEFAULT NULL,
+  `files` varchar(10000) DEFAULT NULL,
+  `author` varchar(20) DEFAULT NULL,
+  `likes` varchar(200) DEFAULT NULL,
+  `date` varchar(100) DEFAULT NULL
+);

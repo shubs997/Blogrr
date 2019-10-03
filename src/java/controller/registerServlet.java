@@ -6,8 +6,12 @@
 package controller;
 
 import DBHandlers.DaoMVC;
+import static controller.passwordHash.getSHA;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,12 +34,20 @@ public class registerServlet extends HttpServlet {
 		String email=request.getParameter("email");
 		String pass=request.getParameter("pass");
                 String uname=request.getParameter("uname");
-                
+                String hashpass = "";
+        // Hash the password using SHA-256
+        try {
+            hashpass = passwordHash.toHexString(getSHA(pass));
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(registerServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
         //2. set the valuse in model class
                 usersBeans ub=new usersBeans();
                 
                 ub.setEmailid(email);
-                ub.setPass(pass);
+                ub.setPass(hashpass);
                 ub.setName(uname);
 
         
