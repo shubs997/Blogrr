@@ -148,9 +148,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t  </div>\n");
       out.write("\t\t\t\t\t\t\t  <div class=\"form-group\">\n");
       out.write("\t\t\t\t\t\t\t    <input type=\"password\" name=\"pass\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n");
-      out.write("                                                            <p>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${loginmsg}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\n");
       out.write("\t\t\t\t\t\t\t  </div>\n");
       out.write("\t\t\t\t\t\t\t  <button type=\"submit\" class=\"btn btn-default btn-lg\">Submit</button>\n");
       out.write("\t\t\t\t\t\t\t  </div>\n");
