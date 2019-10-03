@@ -30,7 +30,7 @@
         </div>
         <div class="form-group" name="editor1">
           <label>Enter Body of the Blog..</label>
-          <textarea id="mytextarea"  name="body" maxlength="1000" class="form-control" placeholder="Blog Body"></textarea>
+          <textarea id="mytextarea" class="mytextarea" name="body" maxlength="1000" class="form-control" placeholder="Blog Body"></textarea>
         </div>
         <div class="checkbox">
           <label>
@@ -48,6 +48,10 @@
   <script>
      CKEDITOR.replace( 'editor1' );
  </script>
-
+ 
+<script>
+    var content = CKEDITOR.instances['mytextarea'].getData();
+    console.log(content);
+</script>
 </section>
 <%@include file="blogfooter.jsp" %>	

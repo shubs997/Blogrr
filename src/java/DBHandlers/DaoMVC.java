@@ -84,7 +84,7 @@ public class DaoMVC
     public static int storeBlogPosts(blogBeans cb) 
     {
         int i=0;
-        String sql="insert into blog_posts (title,description,body,files) values(?,?,?,?)";
+        String sql="insert into blog_posts (title,description,body,files,author) values(?,?,?,?,?)";
         Connection con=connect();
         try
         {
@@ -93,6 +93,8 @@ public class DaoMVC
             stm.setString(2,cb.getDesc());
             stm.setString(3,cb.getBody());
             stm.setString(4,cb.getFiles());
+            stm.setString(5,cb.getAuthor());
+            
             
             i = stm.executeUpdate();
         }
@@ -199,6 +201,8 @@ public class DaoMVC
                         String description = rs.getString(2);
                         String body = rs.getString(3);
                         String files = rs.getString(4);
+                        String author = rs.getString(5);
+                        
                         //System.out.println("Table Contents in dispNotice class:" +title+" "+body+" "+description+" "+files);
                         
                         //set the values in noticeBeans model
@@ -207,6 +211,8 @@ public class DaoMVC
                         bb.setDesc(description);
                         bb.setBody(body);
                         bb.setFiles(files);
+                        bb.setAuthor(author);
+                        
                         //System.out.println("Table Contents in dispBlog class to model:" +bb.getTitle()+" "+bb.getBody()+" "+bb.getDesc()+" "+bb.getFiles());
                         
                         nlist.add(bb);
@@ -226,7 +232,7 @@ public class DaoMVC
     public static List readMoreBlogBody(String blogTitle) 
     {
         ResultSet rs=null;
-         String sql="select title,body,author,date from blog_posts where title like ?";
+         String sql="select title,body,author,date,files from blog_posts where title like ?";
 	 Connection con=connect();
          ArrayList<blogBeans> elist = new ArrayList<>();
 
@@ -248,6 +254,7 @@ public class DaoMVC
                         String body = rs.getString(2);
                         String author = rs.getString(3);
                         String date = rs.getString(4);
+                        String files = rs.getString(5);
                         System.out.println("Table Contents in dispblog class:"+body+" "+author+" ");
                         
                         //set the values in noticeBeans model
@@ -256,6 +263,7 @@ public class DaoMVC
                         cb.setBody(body);
                         cb.setAuthor(author);
                         cb.setDate(date);
+                        cb.setFiles(files);
                         System.out.println("Table Contents in dispblog class to model:"+cb.getTitle()+" " +cb.getBody()+" "+cb.getAuthor()+" "+cb.getDate());
                         
                         elist.add(cb);

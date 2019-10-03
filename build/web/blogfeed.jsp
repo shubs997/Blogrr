@@ -24,7 +24,7 @@
                                                                                 <div class="blog-content">
                                                                                         <h4 class="blog-title"><a href="blog-single.html">${s.title}</a></h4>
                                                                                         <div class="blog-info">
-                                                                                                <a href="#"><i class="fa fa-user"></i>By: Admin</a>
+                                                                                                <a href="#"><i class="fa fa-user"></i>${s.author}</a>
                                                                                                 <a href="#"><i class="fa fa-list"></i>Learning</a>
                                                                                                 <a href="#"><i class="fa fa-heart-o"></i>53K</a>
                                                                                         </div>

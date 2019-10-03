@@ -30,11 +30,13 @@ public class addBlogServlet extends HttpServlet
         String title=request.getParameter("title");
         String desc=request.getParameter("desc");
         String body=request.getParameter("body");
+        String author=(String)session.getAttribute("username");
         //String[] sltuser=request.getParameterValues("sltUser");
         
         System.out.println("title:" +title);
         System.out.println("body:" +body);
         System.out.println("desc:" +desc);
+        System.out.println("author:" +author);
         
         //System.out.println("Users in Servlet:"+Arrays.toString(sltuser));
         
@@ -42,6 +44,8 @@ public class addBlogServlet extends HttpServlet
                 bb.setTitle(title);
                 bb.setDesc(desc);
                 bb.setBody(body);
+                bb.setAuthor(author);
+                
                 //nb.setSltUser(sltuser);
                 
                 

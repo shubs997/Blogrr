@@ -34,7 +34,7 @@ public class readMoreServlet extends HttpServlet {
         
         String blogTitle = request.getParameter("blogTitle");
         
-        
+         
         List viewb;
         viewb = DaoMVC.readMoreBlogBody(blogTitle);
         

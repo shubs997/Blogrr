@@ -21,6 +21,7 @@
                                                                                         <a href="#"><i class="fa fa-calendar"></i>${v.date}</a>
                                                                                         <a href="#"><i class="fa fa-bolt"></i>Learning</a>
                                                                                 </div><br>
+                                                                                <img src="images/blog/${v.files}" alt="#"><br><br>
                                                                                 <p>${v.body}</p>
                                                                         </div>
                                                                 </c:forEach><br><br><br><br>

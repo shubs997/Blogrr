@@ -84,7 +84,7 @@
 								<div class="navbar-collapse">
 									<!-- Main Menu -->
                                                                         <ul class="nav navbar-nav navbar-left">
-                                                                          <li><a href="#contact">your Blog Feed</a></li>
+                                                                          <li><a href="blogfeed.jsp">your Blog Feed</a></li>
                                                                         </ul>
 									<ul id="nav" class="nav menu navbar-nav pull-right">
                                                                                 
