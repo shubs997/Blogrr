@@ -1,5 +1,5 @@
 # social-media-blog-website
-website created for causecode challenge 
+website created for causecode challenge challengecc
 ![](blog-website.gif)
 Java EE project made using JSP and Servlets with Model View Controller (MVC) architecture.
 
@@ -21,7 +21,7 @@ Libraries: JDBC Connector and JSTL
 * JAVA EE
 * MYSQL
 
-#To Execute this project
+## To Execute this project
 ```Clone this repository```
 
 ```open netbeans -> open project``` 
